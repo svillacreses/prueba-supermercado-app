@@ -14,7 +14,7 @@
         <img src="https://img.shields.io/github/stars/svillacreses/prueba-supermercado-app.svg?style=for-the-badge&label=Estrellas&labelColor=364039&color=769c81" title="Estrellas" height="25" />
     </a>
 	<a target="_blank" href="https://github.com/svillacreses/prueba-supermercado-app/stargazers">
-        <img src="https://img.shields.io/github/license/svillacreses/prueba-supermercado-app.svg?style=for-the-badge&label=Licencia&labelColor=364039&color=769c81" title="Licencia" height="25" />
+        <img src="https://img.shields.io/github/license/svillacreses/prueba-supermercado-app?style=for-the-badge&label=Licencia&labelColor=364039&color=769c81" title="Licencia" height="25" />
     </a>
 	<br><br>
 	<a target="_blank" href="https://linkedin.com/in/sivillacreses" style="margin-left:auto;">
