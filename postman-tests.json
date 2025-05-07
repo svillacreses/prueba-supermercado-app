@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "1a4d2517-9c8e-4dd4-90b2-abc123456789",
+    "name": "Supermercado API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear precio",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"producto_id\": 1,\n  \"tiendas\": [1, 2],\n  \"valor\": 1.99,\n  \"inicio\": \"2025-05-07T00:00:00\",\n  \"fin\": \"2025-05-20T23:59:59\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/precios",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "precios"]
+        }
+      }
+    },
+    {
+      "name": "Crear promoción",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Promo 10%\",\n  \"descuento\": 10,\n  \"inicio\": \"2025-05-07T00:00:00\",\n  \"fin\": \"2025-05-20T23:59:59\",\n  \"tiendas\": [1],\n  \"productos\": [1]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/promociones",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "promociones"]
+        }
+      }
+    },
+    {
+      "name": "Consultar precio final",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/precio-final?producto_id=1&tienda_id=1&fecha=2025-05-10T12:00:00",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "precio-final"],
+          "query": [
+            { "key": "producto_id", "value": "1" },
+            { "key": "tienda_id", "value": "1" },
+            { "key": "fecha", "value": "2025-05-10T12:00:00" }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "prueba-supermercado-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Santiago Villacreses",
+  "license": "ISC",
+  "description": "Prueba Técnica ALMACENES TIA"
+}
