@@ -82,7 +82,7 @@ Este es un proyecto _full-stack_ que utiliza **Node.js** (con TypeScript) en el 
 
 3. Acceder a la aplicación:
 
-   - **Frontend:** http://localhost:3000
+   - **Frontend:** http://localhost:3005
    - **Backend:** http://localhost:4000
    - **Base de Datos:** Puedes conectarte desde un cliente como [pgAdmin](https://www.pgadmin.org/download/) o desde la terminal via línea de comandos.
 
