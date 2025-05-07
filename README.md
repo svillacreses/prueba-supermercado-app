@@ -3,16 +3,16 @@
         <img style="width:250px;margin-bottom:10px;" src="https://firebasestorage.googleapis.com/v0/b/gluzsite.appspot.com/o/External%2Ftia.svg?alt=media&token=e447b3e8-26a0-44bd-a3c1-90a78473e66d" />
     </a>
     <br>
-    <img src="https://img.shields.io/badge/FULL--STACK-E53841.svg?style=for-the-badge&label=Prueba%20Técnica" title="ALMACENES TÍA" height="75" />
+    <img src="https://img.shields.io/badge/FULL--STACK-E53841?style=for-the-badge&label=Prueba+T%C3%A9cnica" title="Prueba Técnica FULL-STACK" height="75" />
 </h1>
 
 <div align="center">
-	<a target="_blank" href="https://github.com/svillacreses/prueba-supermercado-app/graphs/contributors">
+	<a target="_blank" style="margin-right: 15px" href="https://github.com/svillacreses/prueba-supermercado-app/graphs/contributors">
         <img src="https://img.shields.io/github/contributors/svillacreses/prueba-supermercado-app.svg?style=for-the-badge&label=Contribuciones&labelColor=364039&color=769c81" title="Contribuciones" height="25" />
-    </a>&#160;&#160;&#160;&#160;
-	<a target="_blank" href="https://github.com/svillacreses/prueba-supermercado-app/stargazers">
+    </a>
+	<a target="_blank" style="margin-right: 15px" href="https://github.com/svillacreses/prueba-supermercado-app/stargazers">
         <img src="https://img.shields.io/github/stars/svillacreses/prueba-supermercado-app.svg?style=for-the-badge&label=Estrellas&labelColor=364039&color=769c81" title="Estrellas" height="25" />
-    </a>&#160;&#160;&#160;&#160;
+    </a>
 	<a target="_blank" href="https://github.com/svillacreses/prueba-supermercado-app/stargazers">
         <img src="https://img.shields.io/github/license/svillacreses/prueba-supermercado-app.svg?style=for-the-badge&label=Licencia&labelColor=364039&color=769c81" title="Licencia" height="25" />
     </a>
