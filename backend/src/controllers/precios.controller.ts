@@ -10,21 +10,21 @@ import {
 export async function crearPrecio(req: Request, res: Response) {
   const result = precioSchema.safeParse(req.body);
   if (!result.success) {
-    return res.status(400).json({ error: result.error.flatten() });
+    return res.status(400).json(result.error.errors);
   }
 
-  const { producto_id, tienda_id, valor, inicio, fin } = result.data;
+  const { producto_id, tienda_id, precio, inicio, fin } = result.data;
   const client = await pool.connect();
 
   try {
     const hayProducto = await existeProducto(client, producto_id);
     if (!hayProducto) {
-      return res.status(404).json({ error: "El producto no existe." });
+      return res.status(404).json({ message: "El producto no existe." });
     }
 
     const hayTienda = await existeTienda(client, tienda_id);
     if (!hayTienda) {
-      return res.status(404).json({ error: "La tienda no existe." });
+      return res.status(404).json({ message: "La tienda no existe." });
     }
 
     const hayConflicto = await existeConflictoPrecio(
@@ -36,7 +36,7 @@ export async function crearPrecio(req: Request, res: Response) {
     );
     if (hayConflicto) {
       return res.status(400).json({
-        error:
+        message:
           "Ya existe un precio activo para ese producto en esa tienda en ese intervalo.",
       });
     }
@@ -45,7 +45,7 @@ export async function crearPrecio(req: Request, res: Response) {
     await client.query(
       `INSERT INTO precios (producto_id, tienda_id, valor, inicio, fin)
        VALUES ($1, $2, $3, $4::timestamp, $5::timestamp)`,
-      [producto_id, tienda_id, valor, inicio, fin]
+      [producto_id, tienda_id, precio, inicio, fin]
     );
 
     res.status(201).json({ message: "Precio creado correctamente" });
@@ -60,7 +60,7 @@ export async function consultarPrecioFinal(req: Request, res: Response) {
   const { producto_id, tienda_id, fecha } = req.query;
 
   if (!producto_id || !tienda_id || !fecha) {
-    return res.status(400).json({ error: "Faltan parámetros requeridos" });
+    return res.status(400).json({ message: "Faltan parámetros requeridos" });
   }
 
   const client = await pool.connect();

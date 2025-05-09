@@ -1,10 +1,10 @@
-version: "3.8"
 services:
   frontend:
     build: ./frontend
     ports:
       - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     environment:
+      - BACKEND_URL=http://backend:${BACKEND_PORT}
       - NEXT_PUBLIC_BACKEND_URL=http://localhost:${BACKEND_PORT}
     volumes:
       - ./frontend:/app

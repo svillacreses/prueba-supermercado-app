@@ -2,7 +2,7 @@
 CREATE TABLE productos (
   id SERIAL PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
-  url_imagen VARCHAR(255) NOT NULL,
+  url_imagen VARCHAR(255) NULL,
   fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -4,9 +4,9 @@ export const precioSchema = z
   .object({
     producto_id: z.number().int(),
     tienda_id: z.number().int(),
-    valor: z.number().positive(),
-    inicio: z.coerce.date(),
-    fin: z.coerce.date(),
+    precio: z.number().positive("El precio debe ser mayor a 0"),
+    inicio: z.coerce.date({ message: "La fecha de inicio es inválida" }),
+    fin: z.coerce.date({ message: "La fecha de fin es inválida" }),
   })
   .refine((data) => data.inicio < data.fin, {
     message: "La fecha de inicio debe ser menor a la de fin",

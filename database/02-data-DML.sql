@@ -1,9 +1,9 @@
 -- Insertar tiendas
 INSERT INTO tiendas (nombre, color_hex) VALUES
   ('Tienda A', 'E6785C'),
-  ('Tienda B', '76D289'),
+  ('Tienda B', '5CA16C'),
   ('Tienda C', '586FE5'),
-  ('Tienda D', 'F1C40F'),
+  ('Tienda D', 'E67E22'),
   ('Tienda E', '8E44AD');
 
 -- Insertar productos

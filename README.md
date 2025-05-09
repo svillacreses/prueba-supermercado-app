@@ -1,9 +1,9 @@
 <h1 align="center">
     <a href="https://www.tia.com.ec/" target="_blank">
-        <img style="width:250px;margin-bottom:10px;" src="https://firebasestorage.googleapis.com/v0/b/gluzsite.appspot.com/o/External%2Ftia.svg?alt=media&token=e447b3e8-26a0-44bd-a3c1-90a78473e66d" />
+        <img style="width:200px;margin-bottom:10px;" src="https://firebasestorage.googleapis.com/v0/b/gluzsite.appspot.com/o/External%2Ftia.svg?alt=media&token=e447b3e8-26a0-44bd-a3c1-90a78473e66d" />
     </a>
     <br>
-    <img src="https://img.shields.io/badge/FULL--STACK-E53841?style=for-the-badge&label=Prueba+T%C3%A9cnica" title="Prueba Técnica FULL-STACK" height="75" />
+    <img src="https://img.shields.io/badge/FULL--STACK-E53841?style=for-the-badge&label=Prueba+T%C3%A9cnica" title="Prueba Técnica FULL-STACK" height="55" />
 </h1>
 
 <div align="center">
@@ -17,16 +17,18 @@
         <img src="https://img.shields.io/github/license/svillacreses/prueba-supermercado-app?style=for-the-badge&label=Licencia&labelColor=364039&color=769c81" title="Licencia" height="25" />
     </a>
 	<br><br>
-	<a target="_blank" href="https://linkedin.com/in/sivillacreses" style="margin-left:auto;">
-        <img src="https://img.shields.io/badge/Linked--In-0077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&label=SVILLACRESES" title="LinkedIn - Santiago Villacreses" height="50" />
+	<a target="_blank" href="https://linkedin.com/in/sivillacreses">
+        <img src="https://img.shields.io/badge/Linked--In-0077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&label=@SIVILLACRESES" title="LinkedIn - Santiago Villacreses" height="40" />
     </a>
 	<br>
 	<h2>Built With:</h2>
-    <a target="_blank" href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" title="Docker" height="40" /></a>
-	<a target="_blank" href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-212121?style=for-the-badge&logo=postgresql" title="PostgreSQL" height="40" /></a>
-	<a target="_blank" href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-0D121C?style=for-the-badge&logo=nodedotjs" title="Node.js" height="40" /></a>
-	<a target="_blank" href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3077C6?style=for-the-badge&logo=typescript&logoColor=white" title="TypeScript" height="40" /></a>
-	<a target="_blank" href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs" title="Next.js" height="40" /></a>
+    <a target="_blank" href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" title="Docker" height="30" /></a>
+	<a target="_blank" href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-212121?style=for-the-badge&logo=postgresql" title="PostgreSQL" height="30" /></a>
+	<a target="_blank" href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-0D121C?style=for-the-badge&logo=nodedotjs" title="Node.js" height="30" /></a>
+    <br>
+    <a target="_blank" href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs" title="Next.js" height="30" /></a>
+    <a target="_blank" href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-030712?style=for-the-badge&logo=tailwindcss" title="Tailwind CSS" height="30" /></a>
+	<a target="_blank" href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3077C6?style=for-the-badge&logo=typescript&logoColor=white" title="TypeScript" height="30" /></a>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -74,6 +76,8 @@ Este es un proyecto _full-stack_ que utiliza **Node.js** (con TypeScript) en el 
 
    Usa `docker-compose` para construir y levantar todos los contenedores (backend, frontend y base de datos):
 
+   _Recuerda que en el archivo `.env` podrás personalizar y ver la configuración de conexión por defecto_
+
    ```sh
    docker-compose up --build
    ```
@@ -84,7 +88,8 @@ Este es un proyecto _full-stack_ que utiliza **Node.js** (con TypeScript) en el 
 
    - **Frontend:** http://localhost:3005
    - **Backend:** http://localhost:4000
-   - **Base de Datos:** Puedes conectarte desde un cliente como [pgAdmin](https://www.pgadmin.org/download/) o desde la terminal via línea de comandos.
+   - **Base de Datos:** Puedes conectarte desde un cliente como [pgAdmin](https://www.pgadmin.org/download/) o desde la terminal via línea de comandos.<br><br>
+     > ⚠️ **IMPORTANTE:** En el caso de agregar productos manualmente directo en la BD, si se usan imágenes (no es obligatorio) se debe revisar y agregar el dominio de la/s imagen/es en el archivo `./frontend/next.config.ts`
 
 4. Comandos útiles:
    - Para parar los contenedores:
