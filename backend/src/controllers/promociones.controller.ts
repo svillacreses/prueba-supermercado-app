@@ -82,7 +82,7 @@ export async function asociarPromocion(req: Request, res: Response) {
 
     // Validamos si la promoción ya está asociada a las tiendas y productos
     const { rows: promocionesExistentes } = await client.query(
-      `SELECT P.id
+      `SELECT 1
        FROM promociones P
        JOIN promociones_tiendas PT ON P.id = PT.promocion_id
        JOIN promociones_productos PP ON P.id = PP.promocion_id
@@ -98,20 +98,42 @@ export async function asociarPromocion(req: Request, res: Response) {
 
     // Asociamos las tiendas
     for (const tienda_id of tiendas) {
-      await client.query(
-        `INSERT INTO promociones_tiendas (promocion_id, tienda_id)
-         VALUES ($1, $2)`,
+      // Verificamos si la tienda ya está asociada a la promoción
+      const { rows } = await client.query(
+        ` SELECT 1
+          FROM promociones_tiendas
+          WHERE 
+            promocion_id = $1 AND 
+            tienda_id = $2`,
         [promocion_id, tienda_id]
       );
+      if (rows.length === 0) {
+        await client.query(
+          ` INSERT INTO promociones_tiendas (promocion_id, tienda_id)
+            VALUES ($1, $2)`,
+          [promocion_id, tienda_id]
+        );
+      }
     }
 
     // Asociamos los productos
     for (const producto_id of productos) {
-      await client.query(
-        `INSERT INTO promociones_productos (promocion_id, producto_id)
-         VALUES ($1, $2)`,
+      // Verificamos si el producto ya está asociado a la promoción
+      const { rows } = await client.query(
+        ` SELECT 1
+          FROM promociones_productos
+          WHERE 
+            promocion_id = $1 AND 
+            producto_id = $2`,
         [promocion_id, producto_id]
       );
+      if (rows.length === 0) {
+        await client.query(
+          ` INSERT INTO promociones_productos (promocion_id, producto_id)
+            VALUES ($1, $2)`,
+          [promocion_id, producto_id]
+        );
+      }
     }
 
     await client.query("COMMIT");
