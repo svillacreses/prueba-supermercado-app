@@ -19,7 +19,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"producto_id\": 2,\n  \"tienda_id\": 1,\n  \"valor\": 9.99,\n  \"inicio\": \"2025-05-07T00:00:00\",\n  \"fin\": \"2025-05-20T23:59:59\"\n}"
+          "raw": "{\n  \"producto_id\": 1,\n  \"tienda_id\": 1,\n  \"valor\": 90.99,\n  \"inicio\": \"2025-05-07T00:00:00\",\n  \"fin\": \"2025-05-20T23:59:59\"\n}"
         },
         "url": {
           "raw": "http://localhost:4000/api/precios",
@@ -67,7 +67,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"promocion_id\": 3,\n  \"tiendas\": [1, 2],\n  \"productos\": [1, 2, 3]\n}"
+          "raw": "{\n  \"promocion_id\": 1,\n  \"tiendas\": [1, 2],\n  \"productos\": [1, 2, 3]\n}"
         },
         "url": {
           "raw": "http://localhost:4000/api/asociar-promocion",
@@ -85,7 +85,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:4000/api/precio-final?producto_id=6&tienda_id=1&fecha=2025-05-07T12:00:00",
+          "raw": "http://localhost:4000/api/precio-final?producto_id=1&tienda_id=1&fecha=2025-05-09T00:06:44",
           "protocol": "http",
           "host": ["localhost"],
           "port": "4000",
@@ -93,7 +93,7 @@
           "query": [
             {
               "key": "producto_id",
-              "value": "6"
+              "value": "1"
             },
             {
               "key": "tienda_id",
@@ -101,7 +101,7 @@
             },
             {
               "key": "fecha",
-              "value": "2025-05-07T12:00:00"
+              "value": "2025-05-09T00:06:44"
             }
           ]
         }
@@ -134,6 +134,21 @@
           "host": ["localhost"],
           "port": "4000",
           "path": ["api", "tiendas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar Promociones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/promociones",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "promociones"]
         }
       },
       "response": []
